@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html>
+<head>
+<meta http-equiv="content-type" charset="utf-8">
+<link rel="stylesheet" href="css/reset.css" type="text/css">
+<link rel="stylesheet" href="css/game.css" type="text/css">
+<title>ゲーム画面</title>
+</head>
+<body>
+<header>ヘッダー</header>
+<div class="wapper clearfix">
+	<div class="player" >
+		<div class="playerDistinction">プレイヤー1（あなた）</div>
+		<div class="playerName"><!--プレイヤー名-->
+		名もなきアスリート</div>
+		<div class="nowChoosing"><!--パネルを選択中のプレイヤーに表示-->
+		パネルを選んでいます</div>
+		<div class="hint"></div>
+	<!--この辺にヒント機能-->
+		取得したパネル
+	<!--この辺に選んだパネル-->
+		<table><tr>
+		<td class="getPannel">
+			<img src="img/judo.jpg">
+		</td>
+		<td class="getPannel">
+		<img src="img/fencing.jpg">
+		</td>
+		</tr>
+		
+		<tr>
+		<td class="getPannel">
+			<img src="img/judo.jpg">
+		</td>
+		<td class="getPannel">
+		<img src="img/fencing.jpg">
+		</td>
+		</tr>
+
+		<tr>
+		<td class="getPannel">
+			<img src="img/judo.jpg">
+		</td>
+		<td class="getPannel">
+		<img src="img/fencing.jpg">
+		</td>
+		</tr>
+
+		<tr>
+		<td class="getPannel">
+			<img src="img/judo.jpg">
+		</td>
+		<td class="getPannel">
+		<img src="img/fencing.jpg">
+		</td>
+		</tr>
+
+		<tr>
+		<td class="getPannel">
+			<img src="img/judo.jpg">
+		</td>
+		<td class="getPannel">
+		<img src="img/fencing.jpg">
+		</td>
+		</tr>
+
+		<tr>
+		<td class="getPannel">
+			<img src="img/judo.jpg">
+		</td>
+		<td class="getPannel">
+		<img src="img/fencing.jpg">
+		</td>
+		</tr>
+		</table>
+<!--
+取得パネルを2列で出すやつ（変数名は適当）
+<% if(request.getAttribute("player1_Pannel") != null){%>
+	<table>
+	<% ArrayList<String> ary = (ArrayList<String>)request.getAttribute("player1");
+	int i = 0;
+	for(String s:ary){
+		if(i%2 == 0){%>
+			<tr><td class="getPannel">
+			<img src="<%=s %>">
+			</td>
+		<%} else {%>
+			<td class="getPannel">
+			<img src="<%=s %>">
+			</td></tr>
+		<%}
+		i++;
+	}%>
+	</table>
+<%}%>
+-->
+<!--
+別クラスのメソッドで生成したのを取得するやつ（変数名は適当）
+<% if(request.getAttribute("player1_Pannel") != null){
+	String player1_Pannel = request.getAttribute("player1_Pannel").toString();%>
+	<%=player1_Pannel %>
+<%}%>
+-->
+
+	</div><!--class="player" ここまで-->
+
+	<div class="panelWapper">
+		<table>
+	<!--get遷移でパラメータを送る-->
+		<tr>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+		</tr>
+		<tr>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+		</tr>
+		<tr>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+		</tr>
+		<tr>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+		</tr>
+		<tr>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+			<td><a href=""><img src="img/judo.jpg"></a></td>
+		</tr>
+		</table>
+	
+		<div class="message">
+		<p>プレイヤー2が選んだパネルは「柔道」です。</p>
+		
+
+		</div>
+	</div><!--panelWapperここまで-->
+
+	<div class="player">
+		<div class="playerDistinction">プレイヤー2（相手）</div>
+		<div class="playerName">プレイヤー名</div>
+		<div class="nowChoosing"><!--パネルを選択中のプレイヤーに表示-->
+		</div>
+<br>
+取得したパネル
+<!--この辺に選んだパネル-->
+	<table><tr>
+	<td class="getPannel">
+	<img src="img/judo.jpg">
+	</td>
+	<td class="getPannel">
+	<img src="img/fencing.jpg">
+	</td>
+	</tr>
+	</table>
+
+	</div><!--playerここまで-->
+	<div class="clearfix"></div>
+</div><!--wapperここまで-->
+<footer><p>フッター</p></footer>
+</body>
+</html>
