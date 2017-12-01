@@ -11,14 +11,14 @@ header{
 	color:#DDD;
 }
 header p{
-	margin-left:320px;
 	line-height:30px;
 }
-
+header img{/*ゲームのロゴ(小)を入れる予定*/
+}
 /*大枠*/
-.wapper{
+div.wapper{
 	margin:5px auto;
-	width:95%;
+	width:990px;
 	background-color:#DDD;
 }
 
@@ -27,7 +27,7 @@ div.player{
 	float:left;
 	box-sizing:border-box;
 	padding:6px;
-	width:200px;
+	width:220px;
 	min-height:500px;
 	background-color:#AAA;
 	font-size:15px;
@@ -43,6 +43,11 @@ div.nowChoosing{
 }
 div.hint{
 }
+div.getPannel img{
+	width:80px;
+	height:50px;
+	margin:2px;
+}
 
 /*パネルの領域*/
 div.panelWapper{
@@ -54,17 +59,18 @@ td img{
 	height:75px;
 	margin:2px;
 }
-.message{
+div.message{
 	padding:10px;
 	background-color:#AAA;
 	border-radius:5px;
 }
-.getPannel img{
-	width:80px;
-	height:50px;
-	margin:2px;
+.selected{
+	-webkit-filter: grayscale(100%) brightness(0.4);
+	-moz-filter: grayscale(100%) brightness(0.4);
+	-o-filter: grayscale(100%) brightness(0.4);
+	-ms-filter: grayscale(100%) brightness(0.4);
+	filter: grayscale(100%) brightness(0.4);
 }
-
 /*フッター*/
 footer{
 	height:30px;

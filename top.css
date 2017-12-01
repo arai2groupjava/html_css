@@ -9,9 +9,12 @@ body{
 }
 /*ヘッダー*/
 header{
+	z-index:1;
+	position:relative;	
 	height:60px;
 	background-color:#001F64;
 	color:#DDD;
+	box-shadow:0 0 10px 5px rgba(0,0,0,0.43);
 }
 header p{
 	margin-left:320px;
@@ -19,23 +22,25 @@ header p{
 }
 /*企業ロゴ*/
 div.logo01{
-	z-index:1;
+	z-index:2;
 	position:absolute;
 	top:0;
 	left:0;
 	width:124px;
 	height:124px;
-	background-color:#FFF;	
+	background-color:#FFF;
+	box-shadow:0 0 10px 5px rgba(0,0,0,0.43);
 }
 /*大会ロゴ*/
 div.logo02{
-	z-index:1;
+	z-index:2;
 	position:absolute;
 	top:0;
 	left:124px;
 	width:182px;
 	height:124px;
 	background-color:#FFF;
+	box-shadow:3px 5px 10px 0px rgba(0,0,0,0.43);
 }
 
 /*大枠*/
