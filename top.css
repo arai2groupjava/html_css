@@ -1,0 +1,142 @@
+﻿.clearfix:after {
+	content:" ";
+	display:block;
+	clear:both;
+}
+
+body{
+/*	background-color:#AAA;*/
+}
+/*ヘッダー*/
+header{
+	height:60px;
+	background-color:#001F64;
+	color:#DDD;
+}
+header p{
+	margin-left:320px;
+	line-height:60px;
+}
+/*企業ロゴ*/
+div.logo01{
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:0;
+	width:124px;
+	height:124px;
+	background-color:#FFF;	
+}
+/*大会ロゴ*/
+div.logo02{
+	z-index:1;
+	position:absolute;
+	top:0;
+	left:124px;
+	width:182px;
+	height:124px;
+	background-color:#FFF;
+}
+
+/*大枠*/
+div.wapper{
+	z-index:0;
+	position:relative;
+	top:0;
+	width:100%;
+	height:600px;
+	margin:0;
+}
+/*背景*/
+div.backImg{
+	position:absolute;
+	top:0;
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	background-image:url("../img/3000x600.png");
+	-webkit-animation: backgroundMove 10s linear infinite;
+}
+/*background-position には画像の横幅を指定*/
+@-webkit-keyframes backgroundMove {
+	0% {background-position: 0 0;}
+	100% {background-position: 3000px 0;}
+}
+@keyframes backgroundMove {
+	0% {background-position: 0 0;}
+	100% {background-position: 3000px 0;}
+}
+
+div.contents{
+	margin:150px auto 0;
+	width:840px;
+}
+/*ゲームのロゴ*/
+div.gameLogo{
+	float:left;
+	margin:0 150px 0 10px;
+	width:350px;
+	height:124px;
+	text-align:center;
+}
+
+/*フォーム部品*/
+div.form{
+	float:left;
+	box-sizing:border-box;
+	padding:15px 5px 5px 5px;
+	width:330px;
+	height:300px;
+
+	background-color:rgba(255,255,255,0.5);
+}
+form{
+	margin-bottom:10px;
+}
+form span{
+	font-size:16px;
+	font-weight:bold;
+}
+form input{
+	margin:5px;
+}
+.form div{
+	margin:13px 3px 0 3px;
+	padding:2px;
+	background-color:rgba(255,255,255,0.5);
+	font-size:13px;
+	line-height:1.3;
+}
+.setsumei{
+	margin-bottom:10px;
+}
+.setsumei span{
+	font-size:15px;
+}
+.setsumei a{
+	font-size:14px;
+	font-weight:bold;
+}
+.setsumei a span{
+	font-size:12px;
+}
+.form div span{
+	font-weight:bold;
+}
+.form div span{
+	font-weight:bold;
+}
+
+/*フッター*/
+footer{
+	height:60px;
+	background-color:#001F64;
+	color:#DDD;
+	text-align:left;
+}
+footer p{
+	margin-left:30px;
+	line-height:60px;
+	color:#AAA;
+	font-size:11px;
+}
