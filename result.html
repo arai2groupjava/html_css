@@ -1,4 +1,5 @@
 ﻿<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="content-type" charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css">
@@ -6,29 +7,32 @@
 <title>リザルト画面</title>
 </head>
 <body>
-<header><img src="img/logo/"><p>ヘッダー</p></header>
+<header><p><img src="img/logo/">ヘッダー</p></header>
 <div class="wapper">
 	<div class="rank">
+		<div class=""><!-- 1位と2位でクラス名か画像を変える -->
+			<img src="" alt="結果">
+		</div>
 	</div><!--rankここまで-->
 
-	<a href="">トップページに戻る</a>
+	<div class="toTop"><a href="">トップページに戻る</a></div>
 
 	<div class="getPanel">
 	獲得したパネル
 	<ol>
 	<!--この辺はfor文で表示(staticなメソッドで生成してもいいかも)-->
 	<li class="getList">
-		<img src="img/panel/">
+		<img src="img/panel/panel_archery.png">
 		<p>獲得した言葉</p>
 	</li>
 	<li class="getList">
-		<img src="img/panel/">
+		<img src="img/panel/panel_archery.png">
 		<p>獲得した言葉</p>
 	</li>
 	</ol>
 	</div><!--getPanelここまで-->
 
-	<a href="">トップページに戻る</a>
+	<div class="toTop"><a href="">トップページに戻る</a></div>
 	<div class="logo02"></div>
 
 </div><!--wapperここまで-->
