@@ -5,19 +5,39 @@ header{
 	color:#DDD;
 }
 header p{
+	line-height:30px;
 }
 header img{/*ゲームのロゴ(小)を入れる予定*/
 }
 
 /*大枠*/
 div.wapper{
+	margin:0 auto;
+	width:1000px;
 }
 
 /*勝敗*/
 div.rank{
-	
+	margin:2px auto 0;
+	width:600px;
+	background:#AAA;
 }
+div.rankImg1{/*1位と2位で切り替える*/
+	position:relative;
+}
+div.rankImg1 img{
+	position:absolute;
+	clip: rect(0px,158px,212px,0px);
+}
+div.rankimg2 img{/*1位と2位で切り替える*/
 
+}
+/*トップページに戻る*/
+div.toTop{
+	margin:5px;
+	text-align:center;
+	font-size:15px;
+}
 /*獲得したパネル*/
 div.getPanel{
 }
