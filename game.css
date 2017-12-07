@@ -1,19 +1,27 @@
-﻿.clearfix:after {
+﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+.clearfix:after {
 	content:" ";
 	display:block;
 	clear:both;
 }
 /*全体*/
 html,body{
+	box-sizing:border-box;
 	height:100%;
+}
+body{
+	font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "メイリオ", Meiryo, Lato, "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 .page{
 	position: relative;
-	min-height: 100%
+	min-height: 100%;
+	background-color:#EEE;
 }
 img{
 	vertical-align:bottom;
 }
+
+
 /*ヘッダー*/
 header{
 	height:30px;
@@ -26,30 +34,47 @@ header p{
 header img{/*ゲームのロゴ(小)を入れる予定*/
 }
 /*大枠*/
-div.wapper{
+.wapper{
 	margin:3px auto;
-/*	width:990px;*/
+	width:990px;
 	background-color:#DDD;
 }
 
 /*プレイヤーごとの領域*/
-div.player{
+.player{
 	float:left;
 	box-sizing:border-box;
 	padding:6px;
 	width:220px;
-	min-height:500px;
+	min-height:600px;
 	background-color:#AAA;
 	font-size:15px;
 }
-div.playerDistinction{
+.playerDistinction{
+	margin-top:3px;
 	margin-bottom:2px;
 	font-size:17px;
 }
-div.playerName{
-	margin-bottom:5px;
+.playerName{
+	margin-left:5px;
+	margin-bottom:7px;
+	line-height:1.2;
 }
-div.nowChoosing{
+.notChoosing{/*選択中ではないプレイヤーに表示*/
+	margin-bottom:10px;
+	height:26px;
+	text-align:center;
+}
+.nowChoosing{ /*選択中のプレイヤーに表示*/
+	margin-bottom:10px;
+	padding:3px;
+	background-color:#DDD;
+}
+.nowChoosing div{
+height:20px;
+line-height:20px;
+	text-align:center;
+	font-weight:bold;
 	-webkit-animation: switchtext 0.7s infinite alternate;
 	-moz-animation: switchtext 0.7s infinite alternate;
 	animation: switchtext 0.7s infinite alternate;
@@ -66,13 +91,19 @@ div.nowChoosing{
 	from { opacity: 1.0; }
 	to { opacity: 0; }
 }
-td.getPannel img{
-	width:100px;
+div.getPanel{
+
+}
+div.getPanel + table{
+	margin:0 auto;
+}
+td.getPanel img{
+	width:80px;
 	margin:2px;
 }
 
 /*パネルの領域*/
-div.panelWapper{
+.panelWapper{
 	float:left;
 	margin:0 15px;
 	padding-bottom:30px;
@@ -87,7 +118,7 @@ td.panelImg{
 .panelImg img{
 	width:120px;
 }
-div.message{
+.message{
 	margin:5px 0;
 	padding:10px;
 	background-color:#AAA;
@@ -120,9 +151,11 @@ footer{
 	bottom:0;
 	width:100%;
 	height:30px;
+	text-align:center;
 	background-color:#001F64;
-	color:#DDD;
 }
 footer p{
 	line-height:30px;
+	color:#AAA;
+	font-size:12px;
 }
