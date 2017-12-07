@@ -15,63 +15,60 @@
 		<div class="playerName"><!--プレイヤー名-->
 		名もなきアスリート</div>
 		<div class="nowChoosing"><!--パネルを選択中のプレイヤーに表示-->
-		パネルを選んでいます</div>
+		<div><span>パネルを選んでいます</span></div></div>
 
-		<div class="hint"></div>
-	<!--この辺にヒント機能-->
-		取得したパネル
-	<!--この辺に選んだパネル-->
+		<div class="getPanel">取得したパネル</div>
 		<table>
 		<tr>
-			<td class="getPannel">
+			<td class="getPanel">
 				<img src="img/panel/120x90(1).png">
 			</td>
-			<td class="getPannel">
+			<td class="getPanel">
 				<img src="img/panel/120x90(1).png">
 			</td>
 		</tr>
 		
 		<tr>
-			<td class="getPannel">
+			<td class="getPanel">
 				<img src="img/panel/120x90(1).png">
 			</td>
-			<td class="getPannel">
-				<img src="img/panel/120x90(1).png">
-			</td>
-		</tr>
-
-		<tr>
-			<td class="getPannel">
-				<img src="img/panel/120x90(1).png">
-			</td>
-			<td class="getPannel">
+			<td class="getPanel">
 				<img src="img/panel/120x90(1).png">
 			</td>
 		</tr>
 
 		<tr>
-			<td class="getPannel">
+			<td class="getPanel">
 				<img src="img/panel/120x90(1).png">
 			</td>
-			<td class="getPannel">
+			<td class="getPanel">
 				<img src="img/panel/120x90(1).png">
 			</td>
 		</tr>
 
 		<tr>
-		<td class="getPannel">
+			<td class="getPanel">
+				<img src="img/panel/120x90(1).png">
+			</td>
+			<td class="getPanel">
+				<img src="img/panel/120x90(1).png">
+			</td>
+		</tr>
+
+		<tr>
+		<td class="getPanel">
 			<img src="img/panel/120x90(1).png">
 		</td>
-		<td class="getPannel">
+		<td class="getPanel">
 		<img src="img/panel/120x90(1).png">
 		</td>
 		</tr>
 
 		<tr>
-			<td class="getPannel">
+			<td class="getPanel">
 				<img src="img/panel/120x90(1).png">
 			</td>
-			<td class="getPannel">
+			<td class="getPanel">
 				<img src="img/panel/120x90(1).png">
 			</td>
 		</tr>
@@ -84,11 +81,11 @@
 	int i = 0;
 	for(String s:ary){
 		if(i%2 == 0){%>
-			<tr><td class="getPannel">
+			<tr><td class="getPanel">
 			<img src="<%=s %>">
 			</td>
 		<%} else {%>
-			<td class="getPannel">
+			<td class="getPanel">
 			<img src="<%=s %>">
 			</td></tr>
 		<%}
@@ -110,7 +107,6 @@
 	<div class="panelWapper">
 		<table>
 	<!--get遷移でパラメータを送る-->
-
 	<!--img class　"canChoose":選択可能/"cannotChoose":選択不可/"selected":選択済(aタグ外す)/-->
 		<tr>
 			<td class="panelImg">
@@ -214,25 +210,24 @@
 	<div class="player">
 		<div class="playerDistinction">プレイヤー2（相手）</div>
 		<div class="playerName">プレイヤー名</div>
-		<div class="nowChoosing"><!--パネルを選択中のプレイヤーに表示-->
-		</div>
-<br>
-取得したパネル
-<!--この辺に選んだパネル-->
-	<table><tr>
-		<tr>
-			<td class="getPannel">
-				<img src="img/panel/120x90(1).png">
-			</td>
-			<td class="getPannel">
-				<img src="img/panel/120x90(1).png">
-			</td>
-		</tr>
-	</table>
+		<div class="notChoosing"><!--パネルを選択中ではないプレイヤーに表示-->
+		　</div>
+
+		<div class="getPanel">取得したパネル</div>
+		<table><tr>
+			<tr>
+				<td class="getPanel">
+					<img src="img/panel/120x90(1).png">
+				</td>
+				<td class="getPanel">
+					<img src="img/panel/120x90(1).png">
+				</td>
+			</tr>
+		</table>
 
 	</div><!--playerここまで-->
 </div><!--wapperここまで-->
-<footer><p>フッター</p></footer>
+<footer><p>&copy 2017&nbsp; ARAI CORPORATION.</p></footer>
 </div><!--pageここまで-->
 </body>
 </html>
