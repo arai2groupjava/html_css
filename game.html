@@ -8,15 +8,19 @@
 </head>
 <body>
 <div class="page">
-<header><p>ヘッダー</p></header>
+<header><img src="img/logo/pane-tori-logo_s.png"></header>
 <div class="wapper clearfix">
 	<div class="player" >
 		<div class="playerDistinction">プレイヤー1（あなた）</div>
 		<div class="playerName"><!--プレイヤー名-->
 		名もなきアスリート</div>
+		<a href="javascript:location.reload()" class="reload">更新</a>
+		<div class="timer">あと15秒</div>
 		<div class="nowChoosing"><!--パネルを選択中のプレイヤーに表示-->
 		<div><span>パネルを選んでいます</span></div></div>
-
+		
+		<div class="score"><span>score：</span>158</div>
+		
 		<div class="getPanel">取得したパネル</div>
 		<table>
 		<tr>
@@ -111,6 +115,7 @@
 		<tr>
 			<td class="panelImg">
 				<a href=""><img class="canChoose" src="img/panel/panel_fencing.png"></a>
+				<div></div>
 			</td>
 			<td class="panelImg">
 				<img class="selected" src="img/panel/panel_canoe.png">
@@ -212,7 +217,7 @@
 		<div class="playerName">プレイヤー名</div>
 		<div class="notChoosing"><!--パネルを選択中ではないプレイヤーに表示-->
 		　</div>
-
+		<div class="score"><span>score：</span>158</div>
 		<div class="getPanel">取得したパネル</div>
 		<table><tr>
 			<tr>
