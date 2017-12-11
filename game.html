@@ -3,19 +3,41 @@
 <head>
 <meta http-equiv="content-type" charset="utf-8">
 <link rel="stylesheet" href="css/reset.css" type="text/css">
-<link rel="stylesheet" href="css/game.css" type="text/css">
-<title>ゲーム画面</title>
+<link rel="stylesheet" href="css/game_base.css" type="text/css">
+<link rel="stylesheet" href="css/game_2.css" type="text/css"><!--1人用と2人用でcssを切り替えたい-->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+		countDown();
+	});
+	function countDown() {
+	var now = new Date(); //現在時刻
+	var standardTime = new Date(1512978854142); //基準時刻（jsp(ミリ秒をlong型として)で取得）
+	var endTime = new Date(standardTime); //終了時刻（javaで基準時刻に15秒加算したものを取得）
+	var restTime = endTime.getTime() - now.getTime(); //残り時間
+	var second = Math.floor(restTime/ 1000); //ミリ秒を秒に変換
+	var oneTenthSecond = Math.abs(Math.floor((restTime% 1000)/ 100)); //ミリ秒を0.1秒に変換
+
+	$("#timer").text("あと" + second +"."+ oneTenthSecond + '秒');
+		setTimeout('countDown()', 100); //0.1秒ごとに実行
+	}
+</script>
+<script type="text/javascriptt">
+setTimeout("location.reload()",1000*15);
+<!--何もしなくても15秒で自動更新-->
+</SCRIPT>
+<title>pane-tori | ゲーム画面</title>
 </head>
 <body>
 <div class="page">
 <header><img src="img/logo/pane-tori-logo_s.png" alt="ゲームのロゴ"></header>
 <div class="wapper clearfix">
-	<div class="player" >
-		<div class="playerDistinction">プレイヤー1（あなた）</div>
+	<div class="player">
+		<div class="playerDistinction">プレイヤー1（あなた）</div><!--プレイヤー自身なら（あなた）と表示-->
 		<div class="playerName"><!--プレイヤー名-->
 		名もなきアスリート</div>
-		<a href="javascript:location.reload()" class="reload">更新</a>
-		<div class="timer">あと15秒</div>
+		<a href="javascript:location.reload()" class="reload">更新</a><!--相手プレイヤーの領域には非表示-->
+		<div id="timer"></div><!--パネルを選択中のプレイヤーに表示-->
 		<div class="nowChoosing"><!--パネルを選択中のプレイヤーに表示-->
 		<div><span>パネルを選んでいます</span></div></div>
 		
@@ -24,55 +46,55 @@
 		<div class="getPanel">取得したパネル</div>
 		<table>
 		<tr>
-			<td class="getPanel">
+			<td class="getPanel getPanelLeft">
 				<img src="img/panel/120x90(1).png">
 			</td>
-			<td class="getPanel">
+			<td class="getPanel getPanelRight">
 				<img src="img/panel/120x90(1).png">
 			</td>
 		</tr>
 		
 		<tr>
-			<td class="getPanel">
+			<td class="getPanel getPanelLeft">
 				<img src="img/panel/120x90(1).png">
 			</td>
-			<td class="getPanel">
-				<img src="img/panel/120x90(1).png">
-			</td>
-		</tr>
-
-		<tr>
-			<td class="getPanel">
-				<img src="img/panel/120x90(1).png">
-			</td>
-			<td class="getPanel">
+			<td class="getPanel getPanelRight">
 				<img src="img/panel/120x90(1).png">
 			</td>
 		</tr>
 
 		<tr>
-			<td class="getPanel">
+			<td class="getPanel getPanelLeft">
 				<img src="img/panel/120x90(1).png">
 			</td>
-			<td class="getPanel">
+			<td class="getPanel getPanelRight">
 				<img src="img/panel/120x90(1).png">
 			</td>
 		</tr>
 
 		<tr>
-		<td class="getPanel">
+			<td class="getPanel getPanelLeft">
+				<img src="img/panel/120x90(1).png">
+			</td>
+			<td class="getPanel getPanelRight">
+				<img src="img/panel/120x90(1).png">
+			</td>
+		</tr>
+
+		<tr>
+		<td class="getPanel getPanelLeft">
 			<img src="img/panel/120x90(1).png">
 		</td>
-		<td class="getPanel">
+		<td class="getPanel getPanelRight">
 		<img src="img/panel/120x90(1).png">
 		</td>
 		</tr>
 
 		<tr>
-			<td class="getPanel">
+			<td class="getPanel getPanelLeft">
 				<img src="img/panel/120x90(1).png">
 			</td>
-			<td class="getPanel">
+			<td class="getPanel getPanelRight">
 				<img src="img/panel/120x90(1).png">
 			</td>
 		</tr>
@@ -108,7 +130,7 @@
 
 	</div><!--class="player" ここまで-->
 
-	<div class="panelWapper">
+	<div class="panelWapper"><!--パネル選択する領域-->
 		<table>
 	<!--get遷移でパラメータを送る-->
 	<!--img class　"canChoose":選択可能/"cannotChoose":選択不可/"selected":選択済(aタグ外す)/-->
@@ -213,7 +235,7 @@
 	</div><!--panelWapperここまで-->
 
 	<div class="player">
-		<div class="playerDistinction">プレイヤー2（相手）</div>
+		<div class="playerDistinction">プレイヤー2</div>
 		<div class="playerName">プレイヤー名</div>
 		<div class="notChoosing"><!--パネルを選択中ではないプレイヤーに表示-->
 		　</div>
@@ -221,10 +243,10 @@
 		<div class="getPanel">取得したパネル</div>
 		<table><tr>
 			<tr>
-				<td class="getPanel">
+				<td class="getPanel getPanelLeft">
 					<img src="img/panel/120x90(1).png">
 				</td>
-				<td class="getPanel">
+				<td class="getPanel getPanelRight">
 					<img src="img/panel/120x90(1).png">
 				</td>
 			</tr>
