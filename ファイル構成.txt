@@ -1,0 +1,8 @@
+ファイル構成（大雑把）
+
+root ─┬ htmlファイル
+      ├ css ─ cssファイル
+      ├ img ┬ logo  ─ ロゴ画像
+      │     ├ panel ─ パネル画像
+      │     └ 背景画像
+      └ js ─ Javascriptファイル
