@@ -1,0 +1,50 @@
+﻿/*1人用ゲーム画面のCSS*/
+/*大枠*/
+.wapper_1{
+	margin:3px auto;
+	width:815px;
+}
+
+/*プレイヤーごとの領域*/
+.player_1{
+	width:280px;
+}
+.playerName_1{
+	margin:2px auto 15px;
+	line-height:1.2;
+	font-weight:bold;
+}
+.score_1{
+	width:100px;
+	height:20px;
+	margin:0 auto 12px;
+	padding:3px;
+	background-color:#DDD;
+	text-align:center;
+	line-height:20px;
+	font-weight:bold;
+	font-size:17px;
+}
+.score_1 span{
+	vertical-align:bottom;
+	font-size:14px;
+}
+div.getPanel{/*取得したパネル*/
+	margin-bottom:5px;
+}
+div.getPanel + table{
+	margin:0 auto;
+}
+.getPanelLeft{
+	padding:2px 4px 2px 2px;
+}
+.getPanelCenter{
+	padding:2px 4px;
+}
+.getPanelRight{
+	padding:2px 2px 2px 4px;
+}
+td.getPanel img{
+	width:80px;
+}
+
