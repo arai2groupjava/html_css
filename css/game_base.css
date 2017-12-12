@@ -15,7 +15,7 @@ body{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: right bottom;
-	background-image: url("../img/game_background.png");
+	background-image: url("../img/background/game_background.png");
 	font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "メイリオ", Meiryo, Lato, "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 .page{
@@ -31,12 +31,50 @@ img{
 .player{
 	float:left;
 	box-sizing:border-box;
-	padding:6px;
 	min-height:600px;
-	background-color:rgba(0,48,153,0.8);
+	background-color:rgba(0,57,179,0.9);
 	font-size:15px;
+	color: #F0FAFA;
 }
-
+.playerTop{
+	margin-bottom: 10px;
+	padding:6px 3px;
+	background-color: rgba(255,255,255,0.7);
+	color:#000;
+}
+.score{
+	height:20px;
+	margin:0 auto 7px;
+	padding:3px;
+	background-color:#DDD;
+	text-align:center;
+	line-height:20px;
+	font-weight:bold;
+	font-size:17px;
+	color: #000;
+}
+.score span{
+	vertical-align:bottom;
+	font-size:14px;
+}
+div.getPanel{/*取得したパネル*/
+	margin-left:6px;
+}
+div.getPanel + table{
+	margin:0 auto;
+}
+.getPanelLeft{
+	padding:2px 4px 2px 2px;
+}
+.getPanelCenter{
+	padding:2px 4px;
+}
+.getPanelRight{
+	padding:2px 2px 2px 4px;
+}
+td.getPanel img{
+	width:80px;
+}
 /*パネルの領域*/
 .panelWapper{
 	float: left;
@@ -58,7 +96,7 @@ td.panelImg{
 .message{
 	margin: 5px 0;
 	padding: 10px;
-	background-color: #516300;
+	background-color: rgba(0,81,99,0.9);
 	border-radius: 5px;
 	line-height: 1.3;
 }

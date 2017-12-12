@@ -14,13 +14,11 @@
 	margin-left:15px;
 }
 .playerDistinction{/*プレイヤー1か2の箇所*/
-	margin-top:3px;
 	margin-bottom:2px;
 	font-size:17px;
 }
 .playerName_2{
-	margin-left:5px;
-	margin-bottom:7px;
+	margin-left: 5px;
 	line-height:1.2;
 }
 .notChoosing{/*選択中ではないプレイヤーに表示*/
@@ -29,13 +27,15 @@
 	text-align:center;
 }
 #timer{ /*選択中のプレイヤーに表示*/
+	margin-left:6px;
 	height:16px;
 	line-height:16px;
 }
 .nowChoosing{ /*選択中のプレイヤーに表示*/
-	margin-bottom:10px;
+	margin:0 6px 13px 6px;
 	padding:3px;
 	background-color:#DDD;
+	color:#000;
 }
 .nowChoosing div{ /*選択中のプレイヤーに表示*/
 	height:20px;
@@ -45,6 +45,9 @@
 	-webkit-animation: switchtext 0.7s infinite alternate;
 	-moz-animation: switchtext 0.7s infinite alternate;
 	animation: switchtext 0.7s infinite alternate;
+}
+.nowChoosing div span{ /*選択中のプレイヤーに表示*/
+	vertical-align:middle;
 }
 @-webkit-keyframes switchtext { /*選択中のプレイヤーに表示*/
 	from { opacity: 1.0; }
@@ -60,10 +63,10 @@
 }
 a.reload{ /*プレイヤー自身にのみ表示*/
 	display: block;
-	margin:0 auto 7px auto;
+	margin:0 auto 10px auto;
 	width:70px;
 	height:30px;
-	border:solid 1px #FFF;
+	border:solid 1px rgba(255,255,255,0.8);
 	background-color:rgba(255,255,255,0.5);
 	color:#222;
 	line-height:30px;
@@ -71,38 +74,9 @@ a.reload{ /*プレイヤー自身にのみ表示*/
 	text-decoration:none;
 }
 a.reload:hover{ /*プレイヤー自身にのみ表示*/
-	background-color:rgba(255,255,255,1);
+	background-color:rgba(255,255,255,0.8);
 	transition-duration:0.5s;
 }
-.score{
+.score_2{
 	width:100px;
-	height:20px;
-	margin:0 auto 7px;
-	padding:3px;
-	background-color:#DDD;
-	text-align:center;
-	line-height:20px;
-	font-weight:bold;
-	font-size:17px;
 }
-.score span{
-	vertical-align:bottom;
-	font-size:14px;
-
-}
-div.getPanel{/*取得したパネル*/
-
-}
-div.getPanel + table{
-	margin:0 auto;
-}
-.getPanelLeft{
-	padding:2px 4px 2px 2px;
-}
-.getPanelRight{
-	padding:2px 2px 2px 4px;
-}
-td.getPanel img{
-	width:80px;
-}
-
