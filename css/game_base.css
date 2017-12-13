@@ -1,5 +1,4 @@
 ﻿/*ゲーム画面の共通部分のCSS*/
-
 /*全体*/
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 .clearfix:after {
@@ -131,8 +130,8 @@ td.panelImg{
 	border: solid 3px red;
 	overflow: hidden;
 }
-.canChoose: hover,
-.cannotChoose: hover{
+.canChoose:hover,
+.cannotChoose:hover{
 	-webkit-filter: brightness(1.1);
 	-moz-filter: brightness(1.1);
 	-o-filter: brightness(1.1);
