@@ -22,7 +22,7 @@ body{
 	font-family: "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, Lato, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	}
 }
-.page{
+.page{	z-index: 2;
 	position: relative;
 	min-height: 100%;
 	background-color: rgba(255,255,255,0.5);
@@ -33,7 +33,22 @@ body{
 img{
 	vertical-align: bottom;
 }
-
+/*リザルト画面への遷移*/
+.gameOverOuter
+	position: relative;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,0,0.8);
+}
+.gameOverOuter div{
+}
+.gameOverOuter p{
+}
+.gameOverOuter a{
+}
 /*ヘッダー*/
 header{
 	height: 36px;
@@ -108,6 +123,8 @@ td.getPanel img{
 	border: double 3px #ABD2FA;
 }
 .panelWapper table{
+	z-index: 0;
+position: relative;
 	margin: 0 auto;
 	padding: 5px;
 }
@@ -125,13 +142,12 @@ td.panelImg{
 	border-radius: 5px;
 	line-height: 1.3;
 }
-.canChoose{
+.correspond{ /*該当する文字があるパネル*/
 	margin: -3px;
 	border: solid 3px red;
 	overflow: hidden;
 }
-.canChoose:hover,
-.cannotChoose:hover{
+.canChoose:hover{ /*選択済ではないパネル*/
 	-webkit-filter: brightness(1.1);
 	-moz-filter: brightness(1.1);
 	-o-filter: brightness(1.1);
@@ -139,7 +155,7 @@ td.panelImg{
 	filter: brightness(1.1);
 }
 
-.selected{
+.selected{ /*選択済のパネル*/
 	-webkit-filter: grayscale(100%) brightness(0.4);
 	-moz-filter: grayscale(100%) brightness(0.4);
 	-o-filter: grayscale(100%) brightness(0.4);
