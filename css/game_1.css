@@ -7,6 +7,7 @@
 /*プレイヤーごとの領域*/
 .player_1{
 	width:280px;
+	padding-bottom: 3px;
 }
 .playerName_1{
 	vertical-align: middle;
