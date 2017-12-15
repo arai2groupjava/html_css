@@ -1,4 +1,4 @@
-﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 /*全体*/
 .clearfix:after {
@@ -24,9 +24,9 @@ body{
 	}
 }
 .page{
-	box-sizing:border-box;
+	box-sizing: border-box;
 	position: relative;
-	padding-bottom:30px;
+	padding-bottom: 30px;
 	min-height: 100%;
 	background-color: rgba(255,255,255,0.5);
 }
@@ -71,52 +71,55 @@ header img{
 	margin:15px;
 	text-align:center;
 	font-size:15px;
+	font-weight: bold;
 }
-
+.toTop a{
+	color: #001F63;
+}
 /*獲得したパネル*/
 .getPanel{
 	padding: 5px;
 	background-color: #BBB;
 }
-.getPanel p{
+.getPanel>p{
 	margin:5px;
 }
 ol{
 	list-style:none;
 	counter-reset:count;
 }
-li.getList{
+.getPanelList{
 	padding: 5px;
 	background-color:#DDD;
 	border-bottom: solid 1px #555;
 }
-li.getList:last-of-type{
+.getPanelList:last-of-type{
 	border-style: none;
 }
-li.getList:before {
+.getPanelList:before {
 	float: left;
-	margin: 2px;
+	margin: 2px 5px;
 	width: 20px;
 	height: 20px;
 	counter-increment: count;
 	content: counter(count);
 	text-align: center;
 	background-color: #999;
-	border-radius: 50%;
+
 	font-size: 15px;
 	line-height: 20px;
-	
 }
-li.getList img{
+.getPanelList img{
 	float: left;
 	height:90px;
 }
-li.getList div{
+.getPanelList div{
 	float: left;
-	margin-left: 5px;
+	margin: 2px 5px;
 	vertical-align:middle;
 }
-
+.getPanelList div p{
+}
 /*ロゴ*/
 .logo{
 	margin:30px auto 5px auto;
