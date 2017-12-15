@@ -191,7 +191,7 @@ td.getPanel img{
 	font-weight:bold;
 }
 .gameOverOuter a:hover{
-	background-color:rgba(146,192,255,1);;
+	background-color:rgba(146,192,255,1);
 	transition-duration:0.5s;
 }
 /*フッター*/
