@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+﻿@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 /*全体*/
 .clearfix:after {
@@ -7,15 +7,15 @@
 	clear: both;
 }
 html,body{
-	box-sizing:border-box;
-	height:100%;
+	box-sizing: border-box;
+	height: 100%;
 }
 body{
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-position: right bottom;
 	background-image: url("../img/background/game_background.png");
-	font-size:16px;
+	font-size: 16px;
 	font-family: "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "メイリオ", Meiryo, Lato, "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 @media all and (-ms-high-contrast: none) {/*IEだと游ゴシックで下部に空白が発生するため、外している*/
@@ -33,33 +33,33 @@ body{
 
 /*ヘッダー*/
 header{
-	height:36px;
-	background-color:#001F64;
-	color:#DDD;
+	height: 36px;
+	background-color: #001F64;
+	color: #DDD;
 }
 header img{
-	vertical-align:middle;
-	margin:2px 10px;
+	vertical-align: middle;
+	margin: 2px 10px;
 }
 
 /*大枠*/
 .wapper{
-	margin:0 auto;
-	width:600px;
+	margin: 0 auto;
+	width: 600px;
 }
 
 /*勝敗*/
 .rank{
-	margin:2px auto 0;
-	width:100%;
+	margin: 2px auto 0;
+	width: 100%;
 	height: 200px;
-	background:#AAA;
+	background: #AAA;
 }
 .rankImg1{/*1位と2位で切り替える*/
-	position:relative;
+	position: relative;
 }
 .rankImg1 img{
-	position:absolute;
+	position: absolute;
 	clip: rect(0px,158px,212px,0px);
 }
 .rankimg2 img{/*1位と2位で切り替える*/
@@ -68,9 +68,9 @@ header img{
 
 /*トップページに戻る*/
 .toTop{
-	margin:15px;
-	text-align:center;
-	font-size:15px;
+	margin: 15px;
+	text-align: center;
+	font-size: 15px;
 	font-weight: bold;
 }
 .toTop a{
@@ -79,24 +79,27 @@ header img{
 /*獲得したパネル*/
 .getPanel{
 	padding: 5px;
-	background-color: #BBB;
+	background-color: rgba(0,57,179,0.8);
 }
 .getPanel>p{
-	margin:5px;
+	margin: 5px;
+	font-size: 17px;
 }
 ol{
-	list-style:none;
-	counter-reset:count;
+	list-style: none;
+	counter-reset: count;
 }
+/*獲得したパネルのリスト*/
 .getPanelList{
-	padding: 5px;
-	background-color:#DDD;
+	position: relative;
+	padding: 5px 0 5px 5px;
+	background-color: rgba(194,202,232,0.85);
 	border-bottom: solid 1px #555;
 }
-.getPanelList:last-of-type{
+.getPanelList: last-of-type{
 	border-style: none;
 }
-.getPanelList:before {
+.getPanelList:before{
 	float: left;
 	margin: 2px 5px;
 	width: 20px;
@@ -104,25 +107,71 @@ ol{
 	counter-increment: count;
 	content: counter(count);
 	text-align: center;
-	background-color: #999;
-
 	font-size: 15px;
 	line-height: 20px;
 }
+
+/*獲得したパネルのリストの見出し*/
+.getPanel li:first-of-type>div:first-of-type{/*項目見出し（獲得したパネル）*/
+	float: left;
+	margin-left: 35px;
+	padding: 0;
+	width: 120px;
+	height: 41px;
+	text-align: center;
+	line-height: 40px;
+	background-color: #92c0ff;
+}
+.resultBlock.first{
+	float: left;
+	width: 435px;
+	border-left: solid 1px #666;
+}
+.score.first{
+	padding: 2px 5px;
+	font-weight: bold;
+	background-color: #92c0ff;
+}
+.getWord.first{
+	padding: 2px 5px;
+	background-color: #92c0ff;
+}
+
+/*獲得したパネルのリストの中身*/
 .getPanelList img{
 	float: left;
-	height:90px;
+	width: 120px;
+	height: 90px;
 }
-.getPanelList div{
-	float: left;
-	margin: 2px 5px;
-	vertical-align:middle;
+.getPanel div{
+	box-sizing: border-box;
 }
-.getPanelList div p{
+.resultBlock:not(.first){
+	position: absolute;
+	top: 50%;
+	left: 158px;
+	transform: translateY(-50%);
+	-webkit- transform: translateY(-50%);
+	width: 400px;
+	font-size: 17px;
+}
+.score{
+	vertical-align: bottom;
+	border-bottom: solid 1px #666;
+}
+.score:not(.first){
+	padding: 5px;
+	display: table-cell;
+	width: 435px;
+	height: 45px;
+}
+.getWord:not(.first){
+	padding: 5px;
+	height: 45px;
 }
 /*ロゴ*/
 .logo{
-	margin:30px auto 5px auto;
+	margin: 30px auto 5px auto;
 	width: 306px;
 	height: 124px;
 	border: solid 1px #AAA;
@@ -135,13 +184,13 @@ ol{
 
 /*フッター*/
 footer{
-	position:absolute;
-	bottom:0;
-	width:100%;
-	height:30px;
-	text-align:center;
-	background-color:#001F64;
-	line-height:30px;
-	color:#AAA;
-	font-size:12px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	text-align: center;
+	background-color: #001F64;
+	line-height: 30px;
+	color: #AAA;
+	font-size: 12px;
 }
