@@ -78,7 +78,7 @@ header img{
 }
 /*獲得したパネル*/
 .getPanel{
-	padding: 5px;
+	padding: 6px 4px 4px 4px;
 	background-color: rgba(0,57,179,0.8);
 }
 .getPanel>p{
@@ -96,7 +96,7 @@ ol{
 	background-color: rgba(194,202,232,0.85);
 	border-bottom: solid 1px #555;
 }
-.getPanelList: last-of-type{
+.getPanelList:last-of-type{
 	border-style: none;
 }
 .getPanelList:before{
@@ -124,7 +124,7 @@ ol{
 }
 .resultBlock.first{
 	float: left;
-	width: 435px;
+	width: 437px;
 	border-left: solid 1px #666;
 }
 .score.first{
