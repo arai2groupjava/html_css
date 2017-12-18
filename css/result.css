@@ -45,7 +45,7 @@ header img{
 /*大枠*/
 .wapper{
 	margin: 0 auto;
-	width: 600px;
+	width: ;/*あとで入れる*/
 }
 
 /*勝敗*/
@@ -78,6 +78,8 @@ header img{
 }
 /*獲得したパネル*/
 .getPanel{
+	float:left;
+	margin-right: 10px;
 	padding: 6px 4px 4px 4px;
 	background-color: rgba(0,57,179,0.8);
 }
@@ -99,7 +101,7 @@ ol{
 .getPanelList:last-of-type{
 	border-style: none;
 }
-.getPanelList:before{
+.getPanelList:before{/*獲得した順番*/
 	float: left;
 	margin: 2px 5px;
 	width: 20px;
@@ -107,7 +109,7 @@ ol{
 	counter-increment: count;
 	content: counter(count);
 	text-align: center;
-	font-size: 15px;
+	font-size: 16px;
 	line-height: 20px;
 }
 
@@ -159,15 +161,79 @@ ol{
 	vertical-align: bottom;
 	border-bottom: solid 1px #666;
 }
+.score.first>span{
+	color:red;
+}
 .score:not(.first){
-	padding: 5px;
+	padding: 5px 5px 5px 10px;
 	display: table-cell;
 	width: 435px;
 	height: 45px;
 }
+.score:not(.first)>span:nth-child(1){
+
+	font-size: 20px;
+	font-weight: bold;
+}
+.score>span:nth-child(2){
+	color:red;
+}
 .getWord:not(.first){
 	padding: 5px;
 	height: 45px;
+	font-weight: bold;
+}
+
+/*ランキング、ハイスコア*/
+.right{
+	float: left;
+	background-color: #AAA;
+}
+.highScore{
+	margin-bottom: 20px;
+	background-color: #DDD;
+}
+.highScore>div{
+	font-weight: bold;
+}
+.highScore li{
+	margin-left: 5px;
+}
+.rankingWapper{
+	padding-top: 5px;
+	background-color: #CCC;
+}
+.rankingWapper>div:not(.ranking) {
+	font-size: 17px;
+	font-weight: bold;
+}
+.highScore,
+.ranking{
+	padding: 5px 0;
+}
+
+.ranking{
+	margin: 0 0 5px 5px;
+	background-color: #DDD;
+}
+
+.ranking>div{
+	padding: 2px 2px 2px 0;
+	font-weight: bold;
+	background-color: #999;
+}
+.highScore li,
+.ranking li{
+	margin: 0 7px 2px 7px;
+	padding: 2px 0;
+	border-bottom: solid 1px #666;
+	line-height: 1.2;
+}
+.ranking li:last-of-type{
+	margin-bottom: 0;
+}
+.ranking:last-of-type{
+	margin-bottom: 0;
 }
 /*ロゴ*/
 .logo{
