@@ -10,11 +10,12 @@
 <div class="page">
 <header><img src="img/logo/pane-tori-logo_s.png" alt="ゲームのロゴ"></header>
 <div class="wapper">
-	<div class="rank">
+
+	<div class="result">
 		<div class=""><!-- 1位と2位でクラス名か画像を変える -->
 			<img src="" alt="結果">
 		</div>
-	</div><!--rankここまで-->
+	</div><!--resultここまで-->
 
 	<div class="toTop"><a href="">トップページに戻る</a></div>
 
@@ -118,43 +119,75 @@
 	
 	<!--右側のカラム-->
 	<div class="right">
-
+		<div>2人プレイ ランキング</div><!--1人プレイと2人プレイを切り替える-->
 		<div class="highScore">
-			<div>ハイスコア（プレイヤー名）</div>
+			<div>ハイスコア<span>（ななしさんななしさんななしさんななしさん）</span></div>
+
 			<ol>
-			<li>1.125</li>
-			<li>2.122</li>
-			<li>3.100</li>
+			<li class="player clearfix">
+				<div class="rank">1.</div>
+				<div class="num">125</span>
+			</li>
+			<li class="clearfix">
+				<div class="rank">2.</div>
+				<div class="num">125</span>
+			</li>
+			<li class="clearfix">
+				<div class="rank">3.</div>
+				<div class="num">125</span>
+			</li>
 			</ol>
-		</div>
+		</div><!--highScoreここまで-->
 		
 		<div class="rankingWapper">
 			<div>ランキング（全体）</div>
 			<div class="ranking">
 				<div>ハイスコア</div>
 				<ol>
-				<li>1.ななしさん 125</li>
-				<li>2.ナナチ 122</li>
-				<li>3.名もなきアスリート 100</li>
+				<li class="clearfix">
+					<div class="rank">1.</div>
+					<div class="name">ななしさん</div>
+					<div class="num">125</div>
+				</li>
+				<li class="clearfix">
+					<div class="rank">2.</div>
+					<div class="name">ナナチ</div>
+					<div class="num">122</div></li>
+				<li class="clearfix">
+					<div class="rank">3.</div>
+					<div class="name">ななしさんななしさんななしさんななしさん</div>
+					<div class="num">120</div>
+				</li>
+				<li class="player clearfix"><!--プレイヤー自身の（今回の）成績:player-->
+					<div class="rank">5.</div>
+					<div class="name">（プレイヤー名）</div>
+					<div class="num">110</div>
+				</li>
 				</ol>
-			</div>
+			</div><!--rankingここまで-->
+
 			<div class="ranking">
 				<div>勝敗数</div>
 				<ol>
-				<li>1.ななしさん 125</li>
-				<li>2.ナナチ 122</li>
-				<li>3.名もなきアスリート 100</li>
+				<li class="player clearfix">
+					<div class="rank">1.</div>
+					<div class="name">（プレイヤー名）</div>
+					<div class="num">125</div>
+				</li>
+				<li class="clearfix">
+					<div class="rank">2.</div>
+					<div class="name">ナナチ</div>
+					<div class="num">122</div></li>
+				<li class="clearfix">
+					<div class="rank">3.</div>
+					<div class="name">ななしさん</div>
+					<div class="num">120</div>
+				</li>
 				</ol>
-			</div>
-		<div class="ranking">
-			<div>総スコア</div>
-				<ol>
-				<li>1.ななしさん 125</li>
-				<li>2.ナナチ 122</li>
-				<li>3.名もなきアスリート 100</li>
-				</ol></div>
-		</div>
-	
+			</div><!--rankingここまで-->
+
+		</div><!--rankingWapperここまで-->
+
 	</div><!--rightここまで-->
 	
 </div><!--contentsここまで-->
