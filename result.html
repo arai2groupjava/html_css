@@ -11,10 +11,46 @@
 <header><img src="img/logo/pane-tori-logo_s.png" alt="ゲームのロゴ"></header>
 <div class="wapper">
 
-	<div class="result">
-		<div class=""><!-- 1位と2位でクラス名か画像を変える -->
-			<img src="" alt="結果">
-		</div>
+	<!-- 以下のようにクラス名を変える/1人プレイ:fin 2人(勝利):win 2人(負け):lose-->
+<!--1人用-->
+	<div class="result fin">
+	<div class="resultText fin" title="CONGRATULATIONS!!">CONGRATULATIONS!!</div>
+	<!--titleとテキストを同一にする-->
+	
+		<div class="resultScore fin clearfix">
+			<div>Total score : <span>55</span></div>
+			<div>
+			score : 45<br>
+			＋<span>bonus : 10</span><br>
+			＊<span>ヒントの有無での加算</span> : 1.0
+			</div>
+			
+		</div><!--resultScoreここまで-->
+		<img class="figure fin" src="img/result/fin.png" alt="勝った人">
+<!--1人用-->
+<!--2人用-->
+	<!--<div class="result win">-->
+	<!--<div class="result lose">-->
+		<!--<div class="resultText win" title="WIN!!">WIN!!</div>-->
+		<!--<div class="resultText lose" title="LOSE...">LOSE...</div>-->
+		<!--titleとテキストを同一にする/2人プレイの勝敗でクラス名(勝:win/負:lose)とテキストを変える-->
+
+		<!--<div class="resultScore win clearfix">-->
+		<!--<div class="resultScore lose clearfix">-->
+			<!--<div>Total score : <span>55</span></div>-->
+			<!--<div>
+			score : 45<br>
+			＋<span>bonus : 10</span><br>
+			＊<span>ヒントの有無での加算</span> : 1.0
+			</div>
+		</div>--><!--resultScoreここまで-->
+		
+		<!--<img class="figure win" src="img/result/win.png" alt="勝った人">-->
+		<!--<img class="figure lose" src="img/result/lose.png" alt="負けた人">-->
+		<!-- 2人プレイの勝敗でクラス名と画像を変える-->
+		<!--<img class="podium" src="img/result/podium.png" alt="表彰台">-->
+		<!--2人用のみ表示-->
+<!--2人用ここまで-->
 	</div><!--resultここまで-->
 
 	<div class="toTop"><a href="">トップページに戻る</a></div>
